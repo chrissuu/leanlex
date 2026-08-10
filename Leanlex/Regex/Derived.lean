@@ -1,8 +1,6 @@
 import Leanlex.Regex.Core
-import Leanlex.CharSet
 
 namespace Regex
-abbrev CharRegex := Regex CharSet
 
 def wildcard : CharRegex := .atom CharSet.univ
 
@@ -44,6 +42,5 @@ def zeroOrOne  (r : Regex α) : Regex α := optional r
 def char (c : Char) : CharRegex := .atom (CharSet.singleton c)
 def range (lo hi : Char) : CharRegex := .atom (CharSet.range lo hi)
 def string (s : String) : CharRegex := seqMany (s.toList.map char)
-
 
 end Regex

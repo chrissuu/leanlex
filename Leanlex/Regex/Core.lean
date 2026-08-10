@@ -1,3 +1,5 @@
+import Leanlex.CharSet
+
 /-- The core, minimal, regex type -/
 inductive Regex (α : Type) where
   | empty
@@ -8,3 +10,5 @@ inductive Regex (α : Type) where
   | compl : Regex α → Regex α
   | seq  : Regex α → Regex α → Regex α
   | star : Regex α → Regex α
+
+abbrev CharRegex := Regex CharSet
