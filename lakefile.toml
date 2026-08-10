@@ -1,0 +1,10 @@
+name = "leanlex"
+version = "0.1.0"
+defaultTargets = ["leanlex"]
+
+[[lean_lib]]
+name = "Leanlex"
+
+[[lean_exe]]
+name = "leanlex"
+root = "Main"
